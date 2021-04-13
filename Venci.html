@@ -1,140 +1,309 @@
 <!DOCTYP html>
 <html>
+
 <head>
-<title>Venci</title>
-<style>
-body {
-  background-image: url("1nebo.jpg");
-}
-p1 {
-  background-color: white;
-}
-h1 {
-  color: red;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #FF00FF;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: green;
-  text-align: center;
-  padding: 14px 70px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #ffffff;
-}
-
- .center {
-  margin: auto;
-  border: 4px solid white;
-  height: 10%;
-  width: 98%;  
-  padding: 10px;
-  background-image: url("cvetno_polje_1.jpg");
-}
-p{
- color:yellow;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.Galerija {
-  float: left;
-  overflow: hidden;
-}
-
-.Galerija .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: green;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.Galerija-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.Galerija-content a {
-  float: none;
-  color: green;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.Galerija-content a:hover {
-  background-color: #ddd;
-}
-
-.Galerija:hover .Galerija-content {
-  display: block;
-}
-</style>
+    <title>Venci</title>
+    <style>
+        body {
+            background-image: url("background-image/Pozadina3.jpg");
+        }
+        h1 {
+           color:white;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #FF00FF;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 70px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: #ffffff;
+        }
+        
+        .center {
+            margin: auto;
+            border: 4px solid white;
+            height: 10%;
+            width: 98%;
+            padding: 10px;
+            background-image: url("cvetno_polje_1.jpg");
+        }
+        
+        p {
+            color: red;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .Galerija {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .Galerija .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .Galerija-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .Galerija-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .Galerija-content a:hover {
+            background-color: #ddd;
+        }
+        
+        .Galerija:hover .Galerija-content {
+            display: block;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .row>.column {
+            padding: 0 8px;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .container {
+            position: relative;
+        }
+        .column {
+            float: left;
+            width: 20%;	
+        }
+        /* The Modal (background) */
+        
+        
+        .mySlides {
+            display: none;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 55%;
+        }
+        .cursor {
+            cursor: pointer;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 19px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        img {
+            margin-bottom: -4px;
+        }
+        
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 22px;
+            color: white;
+		   	
+        }
+        
+        .demo {
+            opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-<h1 style="text-align:center;">Venci</h1>
-<ul>
-  <li><a  href="#Pocetna">Pocetna</a></li>
-<div class="Galerija">
-    <button class="dropbtn">Galerija 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="Galerija-content">
-      <a href="#">Rodjenja</a>
-      <a href="#">Venci</a>
-      <a href="#">Ruze</a>	  
-    </div>
-  </div> 
-  <li><a  href="#Upustvo">Upustvo</a></li>
-  <li><a  href="#Kontakt">Kontakt</a></li>
-  <li><a  href="#O nama">O nama</a></li>
-</ul>
-<table style="width:100%">
-<tr>
-<td><h2>Bela suza</h2>
-<img src="F:\web-vezba\vezba1-sajt-za-cvece\vezba2\Venci/belasuza.jpg" width="300" height="300" >
-<p1 style="text-align:center;" > Cena: 2000din</p1></td>
-<td><h2>Venac</h2>
-<img src="F:\web-vezba\vezba1-sajt-za-cvece\vezba2\Venci/download.jpg" width="300" height="300" >
-<p1 style="text-align:center;" > Cena: 2000din</p1></td>
-<td><h2>Venac za dekoraciju vrata</h2>
-<img src="F:\web-vezba\vezba1-sajt-za-cvece\vezba2\Venci/images.jpg" width="300" height="300">
-<p1 style="text-align:center;" > Cena: 2000din</p1></td>
-</tr>
-<tr>
-<td><h2>Beli ljiljan</h2>
-<img src="F:\web-vezba\vezba1-sajt-za-cvece\vezba2\Venci/ljiljani2.jpg" width="300" height="300">
-<p1 style="text-align:center;" > Cena: 2000din</p1></td>
-<td><h2>Svadbeni venac</h2>
-<img src="F:\web-vezba\vezba1-sajt-za-cvece\vezba2\Venci/Slika1.jpg" width="300" height="300">
-<p1 style="text-align:center;" > Cena: 2000din</p1></td>
-<td><h2>Suza</h2>
-<img src="F:\web-vezba\vezba1-sajt-za-cvece\vezba2\Venci/Suza.jpg" width="300" height="300">
-<p1 style="text-align:center;" > Cena: 2000din</p1></td>
-</tr>
-</table>
+    <h1 style="text-align:center;">Venci</h1>
+    <ul>
+        <li><a href="index.html">Pocetna</a></li>
+        <div class="Galerija">
+            <button class="dropbtn">Galerija
+          <i class="fa fa-caret-down"></i>
+        </button>
+            <div class="Galerija-content">
+                <a href="Rodjenja.html">Rodjenja</a>
+                <a href="Venci.html">Venci</a>
+                <a href="Ruze.html">Ruze</a>
+            </div>
+        </div>
+        <li><a href="Upustvo.html">Upustvo</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        <li><a href="Onama.html">O nama</a></li>
+    </ul>
+ <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="Venci/belasuza.jpg" style="width:90%" height="600" class="center">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="Venci/images.jpg" style="width:90%" height="600" class="center">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="Venci/ljiljani2.jpg" style="width:90%" height="600" class="center">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="Venci/Suza.jpg" style="width:90%" height="600" class="center"> 
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="Venci/suza_24.jpg" style="width:90%" height="600" class="center">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="Venci/suza44.jpg" style="width:90%" height="600" class="center">
+        </div>
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="Venci/belasuza.jpg" style="width:100%" height="98" onclick="currentSlide(1)" alt="Bela suza">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Venci/images.jpg" style="width:100%" height="98" onclick="currentSlide(2)" alt="Sareni venac">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Venci/ljiljani2.jpg" style="width:100%" height="98" onclick="currentSlide(3)" alt="Beli ljiljan">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Venci/Suza.jpg" style="width:100%" height="98" onclick="currentSlide(4)" alt="Suza">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Venci/suza_24.jpg" style="width:100%" height="98" onclick="currentSlide(5)" alt="Iskrena zal">
+          </div>    
+          <div class="column">
+            <img class="demo cursor" src="Venci/suza44.jpg" style="width:100%" height="98" onclick="currentSlide(6)" alt="20 ruza za saucesce">
+          </div>
+        </div>
+      </div>
+
+    
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+    <h1 style="text-align:center;">Cena 2000din</h1>
 </body>
 </html>

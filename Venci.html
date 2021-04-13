@@ -5,9 +5,11 @@
     <title>Venci</title>
     <style>
         body {
-            background-image: url("background-image/nebo.jpg");
+            background-image: url("background-image/Pozadina3.jpg");
         }
-        
+        h1 {
+           color:white;
+        }
         ul {
             list-style-type: none;
             margin: 0;
@@ -22,7 +24,7 @@
         
         li a {
             display: block;
-            color: green;
+            color: black;
             text-align: center;
             padding: 14px 70px;
             text-decoration: none;
@@ -42,7 +44,7 @@
         }
         
         p {
-            color: yellow;
+            color: red;
         }
         
         body {
@@ -58,7 +60,7 @@
             font-size: 16px;
             border: none;
             outline: none;
-            color: green;
+            color: black;
             padding: 14px 16px;
             background-color: inherit;
             font-family: inherit;
@@ -76,7 +78,7 @@
         
         .Galerija-content a {
             float: none;
-            color: green;
+            color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -104,57 +106,25 @@
             display: table;
             clear: both;
         }
-        
+        .container {
+            position: relative;
+        }
         .column {
             float: left;
-            width: 20%;
+            width: 20%;	
         }
         /* The Modal (background) */
         
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 50%;
-            height: 50%;
-            overflow: auto;
-            background-color: grey;
-        }
-        /* Modal Content */
-        
-        .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            width: 50%;
-            max-width: 1200px;
-        }
-        /* The Close Button */
-        
-        .close {
-            color: white;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: #999;
-            text-decoration: none;
-            cursor: pointer;
-        }
         
         .mySlides {
             display: none;
         }
-        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 55%;
+        }
         .cursor {
             cursor: pointer;
         }
@@ -191,7 +161,7 @@
         /* Number text (1/3 etc) */
         
         .numbertext {
-            color: #f2f2f2;
+            color: f2f2f2;
             font-size: 12px;
             padding: 8px 12px;
             position: absolute;
@@ -205,8 +175,9 @@
         .caption-container {
             text-align: center;
             background-color: black;
-            padding: 2px 14px;
+            padding: 2px 22px;
             color: white;
+		   	
         }
         
         .demo {
@@ -216,14 +187,6 @@
         .active,
         .demo:hover {
             opacity: 1;
-        }
-        
-        img.hover-shadow {
-            transition: 0.3s;
-        }
-        
-        .hover-shadow:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     </style>
 </head>
@@ -245,98 +208,69 @@
         <li><a href="Kontakt.html">Kontakt</a></li>
         <li><a href="Onama.html">O nama</a></li>
     </ul>
-	    <div class="row">
-        <div class="column">
-            <img src="Venci/belasuza.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+ <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="Venci/belasuza.jpg" style="width:90%" height="600" class="center">
         </div>
-        <div class="column">
-            <img src="Venci/download.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="Venci/images.jpg" style="width:90%" height="600" class="center">
         </div>
-        <div class="column">
-            <img src="Venci/images.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="Venci/ljiljani2.jpg" style="width:90%" height="600" class="center">
         </div>
-        <div class="column">
-            <img src="Venci/ljiljani2.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="Venci/Suza.jpg" style="width:90%" height="600" class="center"> 
         </div>
-        <div class="column">
-            <img src="Venci/Slika1.jpg" style="width:80%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="Venci/suza_24.jpg" style="width:90%" height="600" class="center">
         </div>
-        <div class="column">
-            <img src="Venci/Suza.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+          
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="Venci/suza44.jpg" style="width:90%" height="600" class="center">
         </div>
-    </div>
-
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-
-            <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                <img src="Venci/belasuza.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="Venci/download.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="Venci/images.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="Venci/ljiljani2.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                <img src="Venci/Slika1.jpg" style="width:80%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                <img src="Venci/Suza.jpg" style="width:100%">
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-            <div class="column">
-                <img class="demo cursor" src="Venci/belasuza.jpg" style="width:100%" onclick="currentSlide(1)" alt="Bela suza">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Venci/download.jpg" style="width:100%" onclick="currentSlide(2)" alt="Venci">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Venci/images.jpg" style="width:100%" onclick="currentSlide(3)" alt="Sareni venac">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Venci/ljiljani2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Beli ljiljan">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Venci/Slika1.jpg" style="width:80%" onclick="currentSlide(5)" alt="Svadbeni venci">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Venci/Suza.jpg" style="width:100%" onclick="currentSlide(6)" alt="Suza">
-            </div>
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
         </div>
-    </div>
+      
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="Venci/belasuza.jpg" style="width:100%" height="98" onclick="currentSlide(1)" alt="Bela suza">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Venci/images.jpg" style="width:100%" height="98" onclick="currentSlide(2)" alt="Sareni venac">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Venci/ljiljani2.jpg" style="width:100%" height="98" onclick="currentSlide(3)" alt="Beli ljiljan">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Venci/Suza.jpg" style="width:100%" height="98" onclick="currentSlide(4)" alt="Suza">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Venci/suza_24.jpg" style="width:100%" height="98" onclick="currentSlide(5)" alt="Iskrena zal">
+          </div>    
+          <div class="column">
+            <img class="demo cursor" src="Venci/suza44.jpg" style="width:100%" height="98" onclick="currentSlide(6)" alt="20 ruza za saucesce">
+          </div>
+        </div>
+      </div>
+
+    
 
     <script>
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
         var slideIndex = 1;
         showSlides(slideIndex);
 
